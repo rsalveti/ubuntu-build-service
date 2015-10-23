@@ -34,7 +34,10 @@ lb config \
  --mode debian \
  --security true \
  --system normal \
- --updates true
+ --updates true \
+ --parent-mirror-bootstrap "http://192.168.1.30:3142/ftp.br.debian.org" \
+ --parent-mirror-chroot "http://192.168.1.30:3142/ftp.br.debian.org" \
+ --parent-mirror-binary "http://192.168.1.30:3142/ftp.br.debian.org"
 
 echo "I: copy customization"
 test -d customization && cp -rf customization/* config/
